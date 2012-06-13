@@ -18,6 +18,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.widget.ImageView;
+import com.icihere.android.R;
 
 public class ImageLoader {
     
@@ -31,7 +32,7 @@ public class ImageLoader {
         executorService=Executors.newFixedThreadPool(5);
     }
     
-    final int stub_id=R.drawable.stub;
+    final int stub_id=R.drawable.ici_watermark;
     public void DisplayImage(String url, ImageView imageView)
     {
         imageViews.put(imageView, url);
