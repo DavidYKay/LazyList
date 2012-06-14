@@ -2,6 +2,7 @@ package com.fedorvlasov.lazylist;
 
 import java.io.File;
 import android.content.Context;
+import android.util.Log;
 
 public class FileCache {
     
@@ -9,10 +10,11 @@ public class FileCache {
     
     public FileCache(Context context){
         //Find the dir to save cached images
-        if (android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED))
+        /*if (android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED))
             cacheDir=new File(android.os.Environment.getExternalStorageDirectory(),"LazyList");
-        else
+        else*/
             cacheDir=context.getCacheDir();
+            //Log.d("FileCache", "caching LazyList images in " + cacheDir);
         if(!cacheDir.exists())
             cacheDir.mkdirs();
     }

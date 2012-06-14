@@ -63,6 +63,10 @@ public class MemoryCache {
             Log.i(TAG, "Clean cache. New size "+cache.size());
         }
     }
+    
+    public void delete(String key){
+    	cache.remove(key);
+    }
 
     public void clear() {
         cache.clear();
